@@ -100,8 +100,7 @@ export default function GalleryPage() {
   const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
 
   return (
-    <>
-      <div className="min-h-screen bg-gradient-to-b from-background to-muted/20 py-8 px-4">
+    <div className="min-h-screen bg-gradient-to-b from-background to-muted/20 py-8 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Header Section */}
           <div className="text-center mb-12">
@@ -197,6 +196,6 @@ export default function GalleryPage() {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 }
