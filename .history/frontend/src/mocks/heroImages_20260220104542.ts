@@ -5,7 +5,7 @@ export const mockHeroImages: HeroCarouselImageDto[] = [
     id: '1',
     title: 'Powering Sri Lanka\'s Future',
     description: 'Sustainable energy generation for a brighter tomorrow',
-    imageUrl: '/images/download.jpg',
+    imageUrl: '/images/silhouette-photo-of-transmission-tower.jpg',
     order: 1
   },
   {
