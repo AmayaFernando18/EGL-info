@@ -1,0 +1,42 @@
+# GenCo Info Portal
+
+Internal information portal for **Electricity Generation Lanka (Pvt) Ltd** employees.
+
+## About GenCo
+
+Responsible for hydropower, coal, thermal plants, and renewable energy generation.
+
+## Features
+
+- 🏠 Dashboard with latest updates
+- 📰 News & Announcements
+- 📅 Event Calendar
+- 📋 Circulars & Documents
+- 🔗 Quick Links & Resources
+- 💡 Generation insights & reports
+- ♻️ Renewable Energy updates
+
+## Tech Stack
+
+- React 18 + TypeScript
+- Vite
+- Tailwind CSS (Green Energy Theme)
+- React Router DOM
+- Lucide React & Heroicons
+
+## Getting Started
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+```
+
+## Theme
+
+This portal uses a **Green Energy** theme to reflect GenCo's sustainable energy initiatives.
