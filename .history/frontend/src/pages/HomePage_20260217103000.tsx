@@ -135,7 +135,7 @@ export default function HomePage() {
               {getGreeting()}, {user?.name}! 👋
             </h2>
             <p className="text-gray-600">
-              Welcome to the GenCo Intranet Portal. Here's what's happening today.
+              Welcome to the EGL Intranet Portal. Here's what's happening today.
             </p>
           </div>
           

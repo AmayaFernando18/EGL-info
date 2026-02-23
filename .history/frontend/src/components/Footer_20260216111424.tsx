@@ -13,7 +13,7 @@ export default function Footer() {
                 <Zap className="h-6 w-6 text-white" />
               </div>
               <div>
-                <h3 className="text-xl font-bold">GenCo</h3>
+                <h3 className="text-xl font-bold">EGL</h3>
                 <p className="text-sm text-gray-300">Electricity Generation Lanka (Pvt) Ltd</p>
               </div>
             </div>
@@ -32,7 +32,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center space-x-2 hover:text-accent transition-colors">
                 <Mail className="h-4 w-4 text-accent flex-shrink-0" />
-                <span>info@genco.lk</span>
+                <span>info@EGL.lk</span>
               </div>
             </div>
 

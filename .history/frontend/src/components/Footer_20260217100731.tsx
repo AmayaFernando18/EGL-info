@@ -31,7 +31,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center space-x-2 hover:text-accent transition-colors">
                 <Mail className="h-4 w-4 text-accent flex-shrink-0" />
-                <span>info@genco.lk</span>
+                <span>info@EGL.lk</span>
               </div>
             </div>
 

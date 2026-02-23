@@ -12,84 +12,84 @@ interface GalleryImage {
 const galleryImages: GalleryImage[] = [
   {
     id: 1,
-    src: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=800&auto=format&fit=crop',
+    src: '/images/silhouette-photo-of-transmission-tower.jpg',
     title: 'Solar Farm Initiative',
     description: 'Our latest solar energy project powering thousands of homes',
     category: 'Solar Energy'
   },
   {
     id: 2,
-    src: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=800&auto=format&fit=crop',
+    src: '/images/panels-electricity-order-sunlight.webp',
     title: 'Wind Power Generation',
     description: 'State-of-the-art wind turbines generating clean energy',
     category: 'Wind Energy'
   },
   {
     id: 3,
-    src: 'https://images.unsplash.com/photo-1548337138-e87d889cc369?q=80&w=800&auto=format&fit=crop',
+    src: '/images/large_wind.jpg',
     title: 'Hydro Electric Plant',
     description: 'Harnessing water power for sustainable electricity',
     category: 'Hydro Energy'
   },
   {
     id: 4,
-    src: 'https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=80&w=800&auto=format&fit=crop',
+    src: '/images/silhouette-photo-of-transmission-tower.jpg',
     title: 'Control Room Operations',
     description: 'Our dedicated team monitoring power distribution 24/7',
     category: 'Operations'
   },
   {
     id: 5,
-    src: 'https://images.unsplash.com/photo-1497440001374-f26997328c1b?q=80&w=800&auto=format&fit=crop',
+    src: '/images/panels-electricity-order-sunlight.webp',
     title: 'Smart Grid Technology',
     description: 'Advanced monitoring systems for efficient power management',
     category: 'Technology'
   },
   {
     id: 6,
-    src: 'https://images.unsplash.com/photo-1595398486084-541a0c3b1ed3?q=80&w=800&auto=format&fit=crop',
+    src: '/images/large_wind.jpg',
     title: 'Battery Storage Systems',
     description: 'Cutting-edge energy storage solutions',
     category: 'Technology'
   },
   {
     id: 7,
-    src: 'https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?q=80&w=800&auto=format&fit=crop',
+    src: '/images/silhouette-photo-of-transmission-tower.jpg',
     title: 'Environmental Conservation',
     description: 'Protecting nature while generating clean energy',
     category: 'Environment'
   },
   {
     id: 8,
-    src: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=800&auto=format&fit=crop',
+    src: '/images/panels-electricity-order-sunlight.webp',
     title: 'Team Training Session',
     description: 'Continuous learning and development programs',
     category: 'Team'
   },
   {
     id: 9,
-    src: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?q=80&w=800&auto=format&fit=crop',
+    src: '/images/large_wind.jpg',
     title: 'Solar Panel Installation',
     description: 'Expert installation of photovoltaic systems',
     category: 'Solar Energy'
   },
   {
     id: 10,
-    src: 'https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?q=80&w=800&auto=format&fit=crop',
+    src: '/images/silhouette-photo-of-transmission-tower.jpg',
     title: 'Maintenance Operations',
     description: 'Regular maintenance ensuring optimal performance',
     category: 'Operations'
   },
   {
     id: 11,
-    src: 'https://images.unsplash.com/photo-1422207049116-cfaf69531072?q=80&w=800&auto=format&fit=crop',
+    src: '/images/panels-electricity-order-sunlight.webp',
     title: 'Transmission Lines',
     description: 'Extensive network delivering power across the nation',
     category: 'Infrastructure'
   },
   {
     id: 12,
-    src: 'https://images.unsplash.com/photo-1513828583688-c52646db42da?q=80&w=800&auto=format&fit=crop',
+    src: '/images/large_wind.jpg',
     title: 'Community Outreach',
     description: 'Engaging with communities on sustainable energy',
     category: 'Community'
@@ -98,57 +98,24 @@ const galleryImages: GalleryImage[] = [
 
 export default function GalleryPage() {
   const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
-  const [filter, setFilter] = useState<string>('All');
-
-  const categories = ['All', ...Array.from(new Set(galleryImages.map(img => img.category)))];
-
-  const filteredImages = filter === 'All' 
-    ? galleryImages 
-    : galleryImages.filter(img => img.category === filter);
 
   return (
     <>
-      <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
-        
-        * {
-          font-family: 'Poppins', sans-serif;
-        }
-      `}</style>
-
       <div className="min-h-screen bg-gradient-to-b from-background to-muted/20 py-8 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Header Section */}
           <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-secondary mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
-              Our Energy Gallery
+            <h1 className="text-4xl font-bold text-secondary/90 mb-4">
+              Our Gallery
             </h1>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              A visual journey through our renewable energy projects, operations, and achievements. 
-              Witness the power of sustainable energy generation.
+              A curated visual showcase of EGL projects, operations, and milestones.
             </p>
-          </div>
-
-          {/* Category Filter */}
-          <div className="flex flex-wrap justify-center gap-3 mb-12">
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setFilter(category)}
-                className={`px-6 py-2 rounded-full font-medium transition-all ${
-                  filter === category
-                    ? 'bg-gradient-to-r from-primary to-accent text-white shadow-glow'
-                    : 'bg-white text-gray-700 hover:bg-gray-100 shadow-soft'
-                }`}
-              >
-                {category}
-              </button>
-            ))}
           </div>
 
           {/* Gallery Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {filteredImages.map((image) => (
+            {galleryImages.map((image) => (
               <div
                 key={image.id}
                 className="relative group rounded-xl overflow-hidden shadow-soft hover:shadow-glow transition-all duration-300 cursor-pointer bg-white"
@@ -175,13 +142,6 @@ export default function GalleryPage() {
               </div>
             ))}
           </div>
-
-          {/* No Results Message */}
-          {filteredImages.length === 0 && (
-            <div className="text-center py-16">
-              <p className="text-gray-500 text-lg">No images found in this category.</p>
-            </div>
-          )}
         </div>
       </div>
 

@@ -2,7 +2,7 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-/* EGL Green Energy Theme */
+/* GenCo Green Energy Theme */
 :root {
   --base: 120 30% 97%;
   --surface: 0 0% 100%;

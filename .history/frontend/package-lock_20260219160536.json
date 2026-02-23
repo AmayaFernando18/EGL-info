@@ -1,11 +1,11 @@
 {
-  "name": "EGL-info-portal",
+  "name": "genco-info-portal",
   "version": "1.0.0",
   "lockfileVersion": 3,
   "requires": true,
   "packages": {
     "": {
-      "name": "EGL-info-portal",
+      "name": "genco-info-portal",
       "version": "1.0.0",
       "dependencies": {
         "@heroicons/react": "^2.1.5",

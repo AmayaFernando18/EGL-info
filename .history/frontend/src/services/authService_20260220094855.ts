@@ -2,7 +2,7 @@ import type { User } from '../types';
 
 export async function getCurrentUser(): Promise<User | null> {
   try {
-    const userStr = localStorage.getItem('genco_user');
+    const userStr = localStorage.getItem('EGL_user');
     if (userStr) {
       return JSON.parse(userStr);
     }
@@ -25,12 +25,12 @@ export async function login(username: string, _password: string): Promise<User> 
         department: 'Generation',
         role: 'Employee'
       };
-      localStorage.setItem('genco_user', JSON.stringify(user));
+      localStorage.setItem('EGL_user', JSON.stringify(user));
       resolve(user);
     }, 500);
   });
 }
 
 export function logout(): void {
-  localStorage.removeItem('genco_user');
+  localStorage.removeItem('EGL_user');
 }

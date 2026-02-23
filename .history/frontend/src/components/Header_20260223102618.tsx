@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
 import { useUser } from '../context/UserContext';
-import { Menu, X, Zap, User, LogOut, Bell, Search } from 'lucide-react';
+import { Menu, X, User, LogOut, Bell, Search } from 'lucide-react';
 import { useState } from 'react';
+import Logo from './Logo';
 
 export default function Header() {
   const { user, logout } = useUser();
@@ -13,11 +14,9 @@ export default function Header() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
-            <div className="bg-gradient-to-br from-primary to-accent p-2 rounded-lg shadow-soft group-hover:shadow-glow transition-all">
-              <Zap className="h-6 w-6 text-white" />
-            </div>
+            <Logo size="medium" className="group-hover:scale-105 transition-transform" />
             <div>
-              <h1 className="text-xl font-bold text-secondary">EGL</h1>
+              <h1 className="text-2xl font-bold text-primary">EGL </h1>
               <p className="text-xs text-gray-500">Electricity Generation Lanka</p>
             </div>
           </Link>
@@ -33,10 +32,14 @@ export default function Header() {
             <Link to="/calendar" className="text-secondary hover:text-primary transition-colors font-medium">
               Calendar
             </Link>
-            <Link to="/generation" className="text-secondary hover:text-primary transition-colors font-medium">
+            {/* <Link to="/generation" className="text-secondary hover:text-primary transition-colors font-medium">
               Generation
+            </Link> */}
+           
+            <Link to="/corporate" className="text-secondary hover:text-primary transition-colors font-medium">
+              Corporate Profile
             </Link>
-            <Link to="/gallery" className="text-secondary hover:text-primary transition-colors font-medium">
+             <Link to="/gallery" className="text-secondary hover:text-primary transition-colors font-medium">
               Gallery
             </Link>
           </nav>
@@ -115,6 +118,13 @@ export default function Header() {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Gallery
+              </Link>
+              <Link
+                to="/corporate"
+                className="px-4 py-2 hover:bg-muted rounded-lg transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Corporate Profile
               </Link>
               {user && (
                 <button
