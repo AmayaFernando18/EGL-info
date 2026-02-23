@@ -11,7 +11,7 @@ const api = axios.create({
 
 // Add token to requests if available
 api.interceptors.request.use((config) => {
-  const token = localStorage.getItem('EGL_token');
+  const token = localStorage.getItem('egl_token');
   if (token) {
     config.headers.Authorization = `Bearer ${token}`;
   }

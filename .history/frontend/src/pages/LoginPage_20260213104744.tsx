@@ -47,7 +47,7 @@ export default function LoginPage() {
               <Zap className="h-8 w-8 text-white" />
             </div>
           </div>
-          <h1 className="text-3xl font-bold text-secondary mb-2">GenCo Info</h1>
+          <h1 className="text-3xl font-bold text-secondary mb-2">EGL Info</h1>
           <p className="text-gray-600">Electricity Generation Lanka (Pvt) Ltd</p>
           <p className="text-sm text-gray-500 mt-2">Internal Employee Portal</p>
         </div>
@@ -114,7 +114,7 @@ export default function LoginPage() {
 
         {/* Footer Text */}
         <div className="mt-6 text-center text-xs text-gray-500">
-          <p>For GenCo employees only</p>
+          <p>For EGL employees only</p>
           <p>© 2026 Electricity Generation Lanka (Pvt) Ltd</p>
         </div>
       </div>

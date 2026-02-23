@@ -38,17 +38,17 @@ export function UserProvider({ children }: { children: ReactNode }) {
         id: '1',
         username,
         name: username.charAt(0).toUpperCase() + username.slice(1),
-        email: `${username}@genco.lk`,
+        email: `${username}@egl.lk`,
         department: 'Generation',
         role: 'Employee'
       };
-      localStorage.setItem('genco_user', JSON.stringify(mockUser));
+      localStorage.setItem('egl_user', JSON.stringify(mockUser));
       setUser(mockUser);
     }
   };
 
   const logout = () => {
-    localStorage.removeItem('genco_user');
+    localStorage.removeItem('egl_user');
     setUser(null);
   };
 
