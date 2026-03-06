@@ -1,11 +1,9 @@
 import { Link } from 'react-router-dom';
-import { useUser } from '../context/UserContext';
-import { Menu, X, User, LogOut, Bell, Search } from 'lucide-react';
+import { Menu, X, Bell, Search } from 'lucide-react';
 import { useState } from 'react';
 import Logo from './Logo';
 
 export default function Header() {
-  const { user, logout } = useUser();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -14,7 +12,7 @@ export default function Header() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
-            <Logo size="medium" className="group-hover:scale-105 transition-transform" />
+            <Logo size="large" className="group-hover:scale-105 transition-transform" />
             <div>
               <h1 className="text-2xl font-bold text-primary">EGL Info</h1>
               <p className="text-xs text-gray-500">Electricity Generation Lanka</p>
@@ -53,22 +51,6 @@ export default function Header() {
               <Bell className="h-5 w-5 text-secondary" />
               <span className="absolute top-1 right-1 w-2 h-2 bg-accent rounded-full"></span>
             </button>
-            
-            {user && (
-              <div className="hidden md:flex items-center space-x-3">
-                <div className="flex items-center space-x-2 px-3 py-2 bg-muted rounded-lg">
-                  <User className="h-4 w-4 text-primary" />
-                  <span className="text-sm font-medium text-secondary">{user.name}</span>
-                </div>
-                <button
-                  onClick={logout}
-                  className="p-2 hover:bg-red-50 text-red-600 rounded-lg transition-colors"
-                  title="Logout"
-                >
-                  <LogOut className="h-5 w-5" />
-                </button>
-              </div>
-            )}
 
             {/* Mobile menu button */}
             <button
@@ -126,18 +108,6 @@ export default function Header() {
               >
                 Corporate Profile
               </Link>
-              {user && (
-                <button
-                  onClick={() => {
-                    logout();
-                    setMobileMenuOpen(false);
-                  }}
-                  className="px-4 py-2 hover:bg-red-50 text-red-600 rounded-lg transition-colors text-left flex items-center space-x-2"
-                >
-                  <LogOut className="h-4 w-4" />
-                  <span>Logout</span>
-                </button>
-              )}
             </nav>
           </div>
         )}

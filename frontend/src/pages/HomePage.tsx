@@ -14,7 +14,6 @@ import AnnouncementBanner from '../components/AnnouncementBanner';
 import Calendar from '../components/Calendar';
 import { Calendar as CalendarIcon, FileText, Zap, ArrowRight, ChevronLeft, ChevronRight, Users, Target, Briefcase, Mail, Home, Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { useUser } from '../context/UserContext';
 import {
   GlobeAltIcon,
   CalculatorIcon,
@@ -48,7 +47,6 @@ const iconMap: Record<string, any> = {
 
 export default function HomePage() {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const { user } = useUser();
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % mockHeroImages.length);
@@ -98,9 +96,6 @@ export default function HomePage() {
             <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-primary/80 to-transparent flex items-center">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
                 <div className="max-w-3xl">
-                  <div className="inline-flex items-center px-4 py-2 bg-accent/20 backdrop-blur-sm rounded-full mb-4">
-                    <span className="text-white text-sm font-semibold">EGL Updates</span>
-                  </div>
                   <h1 className="text-5xl md:text-6xl font-bold text-white mb-4 leading-tight">
                     {image.title}
                   </h1>
@@ -145,7 +140,7 @@ export default function HomePage() {
         <div className="mb-8">
           <div className="bg-gradient-to-r from-primary/5 to-accent/5 rounded-2xl p-6 mb-6 border border-primary/10">
             <h2 className="text-3xl font-bold text-secondary mb-2">
-              {getGreeting()}, {user?.name}! 👋
+              {getGreeting()}! 👋
             </h2>
             <p className="text-gray-600">
               Welcome to the EGL Intranet Portal. Here's what's happening today.
