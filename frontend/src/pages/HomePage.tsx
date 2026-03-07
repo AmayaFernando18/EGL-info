@@ -5,11 +5,9 @@ import { mockEvents } from '../mocks/events';
 import { mockHighlights } from '../mocks/highlights';
 import { mockHeroImages } from '../mocks/heroImages';
 import { mockActivities } from '../mocks/activities';
-import { mockEmployeeSpotlight } from '../mocks/employees';
 import { mockAnnouncements } from '../mocks/announcements';
 import Card from '../components/Card';
 import StatsWidget from '../components/StatsWidget';
-import EmployeeSpotlight from '../components/EmployeeSpotlight';
 import AnnouncementBanner from '../components/AnnouncementBanner';
 import Calendar from '../components/Calendar';
 import { Calendar as CalendarIcon, FileText, Zap, ArrowRight, ChevronLeft, ChevronRight, Users, Target, Briefcase, Mail, Home, Clock } from 'lucide-react';
@@ -178,11 +176,6 @@ export default function HomePage() {
               );
             })}
           </div>
-        </div>
-
-        {/* Employee Spotlight */}
-        <div className="mb-10">
-          <EmployeeSpotlight employees={mockEmployeeSpotlight} />
         </div>
 
         {/* Main Content Row 1: News + Recent Activity */}

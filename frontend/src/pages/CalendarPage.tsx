@@ -42,8 +42,12 @@ export default function CalendarPage() {
   return (
     <div className="min-h-screen bg-base">
       {/* Header Section */}
-      <div className="bg-gradient-to-r from-primary to-accent text-white py-12">
+      <div className="bg-gradient-to-r from-primary via-primary/80 to-accent/90 text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/10 rounded-full border border-white/20 mb-6">
+            <CalendarIcon className="h-4 w-4" />
+            <span className="text-xs font-semibold tracking-widest uppercase">Calendar Overview</span>
+          </div>
           <h1 className="text-4xl font-bold mb-3">Event Calendar</h1>
           <p className="text-gray-100 text-lg">Stay informed about upcoming company events and meetings</p>
         </div>

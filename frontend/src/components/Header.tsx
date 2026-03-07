@@ -14,8 +14,7 @@ export default function Header() {
           <Link to="/" className="flex items-center space-x-3 group">
             <Logo size="large" className="group-hover:scale-105 transition-transform" />
             <div>
-              <h1 className="text-2xl font-bold text-primary">EGL Info</h1>
-              <p className="text-xs text-gray-500">Electricity Generation Lanka</p>
+              <h1 className="text-2xl font-bold text-primary/85">EGL Info</h1>
             </div>
           </Link>
 

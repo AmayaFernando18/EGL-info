@@ -79,7 +79,7 @@ const statements = {
 export default function CorporateProfilePage() {
   return (
     <div className="min-h-screen bg-base">
-      <div className="bg-gradient-to-r from-primary to-accent text-white py-12">
+      <div className="bg-gradient-to-r from-primary via-primary/80 to-accent/90 text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/10 rounded-full border border-white/20 mb-6">
             <Building2 className="h-4 w-4" />

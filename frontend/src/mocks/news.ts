@@ -7,7 +7,7 @@ export const mockNews: NewsDto[] = [
     excerpt: 'EGL unveils ambitious 100MW solar power facility to enhance renewable energy capacity.',
     content: 'Full article content here...',
     category: 'Renewable Energy',
-    imageUrl: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800',
+    imageUrl: '/images/power-cell.jpg',
     publishedAt: '2026-02-05',
     author: 'Renewable Energy Division'
   },
@@ -17,7 +17,7 @@ export const mockNews: NewsDto[] = [
     excerpt: 'Unprecedented rainfall leads to optimal reservoir levels across all major hydro plants.',
     content: 'Full article content here...',
     category: 'Hydropower',
-    imageUrl: 'https://images.unsplash.com/photo-1532619187608-e5375cab36aa?w=800',
+    imageUrl: '/images/hydro-power.jpg',
     publishedAt: '2026-02-04',
     author: 'Hydro Operations Team'
   },
@@ -27,7 +27,7 @@ export const mockNews: NewsDto[] = [
     excerpt: 'Planned maintenance activities for Q1 2026 announced for all thermal generation facilities.',
     content: 'Full article content here...',
     category: 'Operations',
-    imageUrl: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800',
+    imageUrl: '/images/thermal.jpg',
     publishedAt: '2026-02-03',
     author: 'Thermal Division'
   },
@@ -37,7 +37,7 @@ export const mockNews: NewsDto[] = [
     excerpt: 'Board approves development of three new wind farms in Northern Province.',
     content: 'Full article content here...',
     category: 'Renewable Energy',
-    imageUrl: 'https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?w=800',
+    imageUrl: '/images/large_wind.jpg',
     publishedAt: '2026-02-02',
     author: 'Strategic Planning'
   }

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { mockNews } from '../mocks/news';
 import Card from '../components/Card';
-import { Search, Filter, TrendingUp, Clock, User } from 'lucide-react';
+import { Search, Filter, TrendingUp, Clock, User, Newspaper } from 'lucide-react';
 
 export default function NewsPage() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -23,8 +23,12 @@ export default function NewsPage() {
   return (
     <div className="min-h-screen bg-base">
       {/* Header Section */}
-      <div className="bg-gradient-to-r from-primary to-accent text-white py-12">
+      <div className="bg-gradient-to-r from-primary via-primary/80 to-accent/90 text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/10 rounded-full border border-white/20 mb-6">
+            <Newspaper className="h-4 w-4" />
+            <span className="text-xs font-semibold tracking-widest uppercase">News and Updates</span>
+          </div>
           <h1 className="text-4xl font-bold mb-3">News & Announcements</h1>
           <p className="text-gray-100 text-lg">Stay updated with the latest news and developments at EGL</p>
         </div>
