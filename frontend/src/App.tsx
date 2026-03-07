@@ -7,6 +7,7 @@ import CalendarPage from "./pages/CalendarPage";
 import GenerationPage from "./pages/GenerationPage";
 import GalleryPage from "./pages/GalleryPage";
 import CorporateProfilePage from "./pages/CorporateProfilePage";
+import { canAccessAdmin } from './utils/rbac'
 
 function AppRoutes() {
   return (
